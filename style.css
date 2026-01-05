@@ -1,0 +1,934 @@
+    :root {
+    --bege-principal: #baa2a2;
+    --bege-claro: #e8dcd3;
+    --bege-escuro: #a08a8a;
+    --rose-gold: #baa2a2;
+    --marrom-suave: #8b7968;
+    --cinza-neutro: #f5f1ed;
+    --branco: #FFFFFF;
+    --preto-texto: #2d2d2d;
+    --preto-claro: #5a5a5a;
+    --dourado: #c9a876;
+    --google-blue: #4285F4;
+    
+    --sombra-leve: 0 4px 15px rgba(0, 0, 0, 0.05);
+    --sombra-card: 0 10px 30px rgba(0, 0, 0, 0.1);
+    --sombra-forte: 0 15px 40px rgba(0, 0, 0, 0.2);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box;font-family: 'Poppins', sans-serif; }
+    html { scroll-behavior: smooth; }
+    body { background-color: var(--branco); color: var(--preto-texto); overflow-x: hidden; }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+    img { max-width: 100%; display: block; }
+    button { cursor: pointer; border: none; background: transparent; }
+
+    /* ================= ANIMAÇÃO SCROLL REVEAL (NOVO) ================= */
+    .reveal {
+    opacity: 0;
+    transform: translateY(60px); /* Começa de baixo */
+    transition: all 1s ease;
+    }
+    .reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+    }
+
+    /* ================= HEADER ================= */
+.cabecalhoPainelDoMenu {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background: linear-gradient(180deg, rgba(0,0,0,0.8), transparent);
+  padding: 20px 0;
+}
+
+.containerMenuNavegacao {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo img {
+  height: 55px;
+}
+
+.textoLogo strong {
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.textoLogo span {
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.9);
+  letter-spacing: 2px;
+}
+
+/* MENU */
+.painelDoMenu {
+  display: flex;
+  gap: 35px;
+}
+
+.painelDoMenu a {
+  color: #fff;
+  font-size: 1.30rem;
+}
+
+/* BOTÃO MOBILE */
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* ================= HERO ================= */
+.heroCarrossel {
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.slide,
+.slideContainer {
+  position: absolute;
+  inset: 0;
+}
+
+.slide {
+  opacity: 0;
+  transition: opacity 1.2s;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.85);
+}
+
+.heroConteudo {
+  position: relative;
+  z-index: 2;
+  max-width: 550px;
+  margin-left: 80px;
+  color: #fff;
+}
+
+.heroConteudo h2 {
+  font-size: 1.8rem;
+  font-weight: 300;
+}
+
+.heroConteudo h1 {
+  font-size: 2.8rem;
+  color: #EBC990;
+  margin: 25px 0 40px;
+  line-height: 1.1;
+}
+
+.agendarbotao {
+  display: inline-block;
+  padding: 16px 36px;
+  background: var(--bege-principal);
+  color: #fff;
+  border-radius: 30px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+/* SETAS */
+.seta {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 3.5rem;
+  color: rgba(255,255,255,0.4);
+}
+
+.seta-esq { left: 20px; }
+.seta-dir { right: 20px; }
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .painelDoMenu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: var(--bege-principal);
+    flex-direction: column;
+    width: 100%;
+    display: none;
+    padding: 20px;
+    text-align: center;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+  }
+
+  .painelDoMenu.active {
+    display: flex;
+  }
+
+  .heroConteudo {
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 20px;
+  }
+
+  .heroConteudo h1 {
+    font-size: 2.3rem;
+  }
+
+  .agendarbotao {
+    width: 100%;
+    padding: 14px;
+  }
+
+  .seta {
+    font-size: 2.5rem;
+  }
+}
+
+
+    /* ================= SOBRE NÓS ================= */
+.sectionSobre {
+    background: linear-gradient(135deg, var(--bege-principal) 0%, var(--bege-claro) 100%);
+    padding: 100px 0; 
+    min-height: 700px; 
+    display: flex; 
+    align-items: center;
+}
+
+.sobreContainer {
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    gap: 60px;
+    width: 90%; 
+    max-width: 1500px; 
+    margin: 0 auto; 
+    align-items: center;
+}
+
+.sobreImagemWrapper { 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+}
+
+.foto-profissional {
+    width: 100%; 
+    max-width: 550px; 
+    height: auto; 
+    object-fit: cover;
+    border-radius: 30px;
+    box-shadow: 25px 25px 0 #ffffff, 0 10px 40px rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+
+.foto-profissional:hover { 
+    transform: scale(1.02); 
+}
+
+.sobreConteudo { 
+    color: var(--branco); 
+}
+
+.sobreConteudo h2 { 
+    font-size: 3.5rem; 
+    margin-bottom: 15px; 
+    font-weight: 700; 
+}
+
+/* NOVO: Estilo para o CRMV em destaque */
+.sobreConteudo .crmv {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: #EBC990; /* Amarelo/dourado similar ao protótipo */
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.sobreConteudo h3 { 
+    font-size: 2.8rem; /* Aumentado de 2rem para 2.8rem */
+    margin-bottom: 30px; 
+    font-weight: 700; /* Mudado de 400 para 700 para mais destaque */
+    color: #ffffff; /* Branco puro para maior contraste */
+    line-height: 1.2;
+}
+
+.sobreConteudo p { 
+    font-size: 1.3rem; 
+    line-height: 1.8; 
+    margin-bottom: 25px; 
+    opacity: 0.95; 
+}
+
+.saibaMaisBtn {
+    padding: 18px 45px; 
+    font-size: 1.1rem; 
+    background-color: var(--branco); 
+    color: var(--bege-principal);
+    font-weight: 700; 
+    border-radius: 25px; 
+    margin-top: 15px; 
+    transition: 0.3s;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border: none;
+    cursor: pointer;
+}
+
+.saibaMaisBtn a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.saibaMaisBtn:hover { 
+    transform: translateY(-5px); 
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15); 
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .sobreContainer {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .sobreConteudo h2 {
+        font-size: 2.5rem;
+    }
+    
+    .sobreConteudo h3 {
+        font-size: 2rem;
+    }
+    
+    .sobreConteudo .crmv {
+        font-size: 1rem;
+    }
+}
+
+    /* ================= SERVIÇOS (Slide Up - Ajustado) ================= */
+    .sectionServicos { 
+        padding: 120px 40px; 
+        background-color: var(--cinza-neutro); 
+        width: 100%; 
+    }
+
+    .sectionServicos h2 { 
+        text-align: center; 
+        font-size: 3.5rem; 
+        color: var(--bege-principal); /* Título da seção no Rose */
+        margin-bottom: 15px; 
+        font-weight: 700; 
+    }
+
+    .servicosSubtitulo { 
+        text-align: center; 
+        color: var(--preto-claro); 
+        margin-bottom: 70px; 
+        font-size: 1.3rem; 
+    }
+
+    .servicosGrid {
+        display: grid; 
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+        gap: 50px; 
+        max-width: 1600px; 
+        margin: 0 auto;
+    }
+
+    /* O CARD */
+    .servicoCard {
+        position: relative;
+        width: 100%;
+        height: 480px; 
+        /* Fundo do card vira Rose quando a imagem encolhe */
+        background: var(--bege-principal); 
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: var(--sombra-card);
+        cursor: pointer;
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .servicoCard:hover {
+        transform: translateY(-10px);
+        box-shadow: var(--sombra-forte);
+    }
+
+    /* A IMAGEM */
+    .servicoImagem {
+        width: 100%;
+        height: 100%; 
+        position: relative;
+        overflow: hidden;
+        transition: height 0.4s ease;
+    }
+
+    .servicoImagem img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+    }
+
+    .overlay-hover {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(to top, rgba(0,0,0,0.6) 0%, transparent 60%);
+        transition: 0.4s;
+    }
+
+    /* O BLOCO DE CONTEÚDO SÓLIDO */
+    .servicoInfoMinimalista {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 45%; 
+        padding: 25px 30px;
+        z-index: 10;
+        color: #fff;
+        
+        /* MUDANÇA 1: Fundo agora é ROSE (Sua cor principal) */
+        background-color: var(--bege-principal); 
+        
+        /* Empurra o bloco para baixo */
+        transform: translateY(calc(100% - 80px)); 
+        transition: transform 0.4s ease;
+    }
+
+    .servicoInfoMinimalista h3 {
+        font-size: 1.6rem;
+        font-weight: 700;
+        margin-bottom: 15px;
+        line-height: 1.2;
+        
+        /* MUDANÇA 2: Removi os "..." (Ellipsis) */
+        /* O texto agora pode quebrar linha normalmente se for grande */
+        white-space: normal; 
+    }
+
+    .servicoInfoMinimalista p {
+        font-size: 1rem;
+        line-height: 1.5;
+        opacity: 0; 
+        margin-bottom: 25px;
+        transform: translateY(20px);
+        transition: 0.4s ease;
+        transition-delay: 0.1s;
+    }
+
+    /* ARQUIVO: css/style.css (Dentro da seção de Serviços) */
+
+    /* ... código anterior ... */
+
+    .btnVerMais {
+        padding: 12px 30px;
+        
+        /* MUDANÇA AQUI: Botão BRANCO com letra MARROM */
+        background: var(--branco); 
+        color: var(--marrom-suave);
+        
+        border-radius: 50px;
+        font-weight: 700;
+        font-size: 0.95rem;
+        opacity: 0; 
+        transform: translateY(20px);
+        transition: 0.4s ease;
+        transition-delay: 0.2s;
+        display: inline-flex; align-items: center; gap: 8px;
+    }
+    .btnVerMais i { font-size: 0.8rem; }
+
+
+    /* MUDANÇA AQUI TAMBÉM: Efeito ao passar o mouse SOBRE O BOTÃO */
+    .servicoCard:hover .btnVerMais:hover {
+        /* Quando passar o mouse no botão, ele inverte */
+        background: var(--marrom-suave);
+        color: var(--branco);
+    }
+
+    /* ... código posterior ... */
+    .btnVerMais i { font-size: 0.8rem; }
+
+
+    /* ================= EFEITOS DE HOVER ================= */
+
+    .servicoCard:hover .servicoImagem {
+        height: 55%; /* Imagem encolhe */
+    }
+    .servicoCard:hover .servicoImagem img {
+        transform: scale(1.1); 
+    }
+    .servicoCard:hover .overlay-hover {
+        opacity: 0; 
+    }
+
+    .servicoCard:hover .servicoInfoMinimalista {
+        transform: translateY(0); /* Bloco Rose sobe */
+    }
+
+    .servicoCard:hover .servicoInfoMinimalista p,
+    .servicoCard:hover .btnVerMais {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .servicoCard:hover .btnVerMais:hover {
+        background: var(--branco);
+        color: var(--marrom-suave);
+    }
+
+    /* ================= AVALIAÇÕES ================= */
+    .sectionAvaliacoes { background: var(--branco); padding: 120px 40px; text-align: center; overflow: hidden; }
+    .sectionAvaliacoes h2 { font-size: 3.5rem; color: var(--bege-principal); margin-bottom: 15px; }
+    .avaliacoesSubtitulo { color: var(--preto-claro); margin-bottom: 70px; font-size: 1.3rem; }
+
+    .avaliacoesWrapper { width: 100%; max-width: 1400px; margin: 0 auto; overflow: hidden; position: relative; padding: 20px 0; }
+    .avaliacoesTrack { display: flex; gap: 40px; width: max-content; animation: scrollAvaliacoes 30s linear infinite; }
+    .avaliacoesTrack:hover { animation-play-state: paused; }
+
+    @keyframes scrollAvaliacoes { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+
+    .avaliacaoCard {
+        width: 450px; flex-shrink: 0; background-color: var(--branco); border-radius: 15px;
+        padding: 45px; box-shadow: 0 15px 40px rgba(0,0,0,0.08); border: 1px solid #f0f0f0; text-align: left;
+    }
+
+    .avalHeader { display: flex; align-items: center; gap: 20px; margin-bottom: 25px; position: relative; }
+    .avalFoto { width: 80px; height: 80px; border-radius: 50%; object-fit: cover; border: 3px solid var(--bege-claro); }
+    .placeholder-foto {
+        width: 80px; height: 80px; border-radius: 50%; background: #673ab7; color: white;
+        display: flex; justify-content: center; align-items: center; font-weight: bold; font-size: 1.8rem;
+    }
+    .avalInfo h4 { font-size: 1.3rem; color: var(--preto-texto); margin-bottom: 4px; font-weight: 700; }
+    .avalEstrelas { color: #fbbc04; letter-spacing: 2px; font-size: 1.3rem; } 
+    .data-aval { display: block; font-size: 0.85rem; color: #888; margin-top: 3px; }
+    .g-icon-top { width: 28px; position: absolute; top: 0; right: 0; }
+    .avalTexto { font-size: 1.2rem; line-height: 1.7; color: var(--preto-claro); margin-bottom: 30px; font-style: italic; }
+    .avalFooter { border-top: 1px solid #eee; padding-top: 20px; }
+    .avalLink { color: var(--preto-claro); font-size: 0.95rem; font-weight: 600; display: flex; align-items: center; gap: 10px; transition: 0.2s; }
+    .avalLink:hover { color: var(--google-blue); }
+
+    /* ================= CONTATOS ================= */
+    .sectionContatos { background: var(--cinza-neutro); padding: 100px 40px; }
+    .contato-container {
+        max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1.5fr; gap: 0;
+        background: var(--branco); border-radius: 30px; overflow: hidden; box-shadow: var(--sombra-card); min-height: 600px;
+    }
+    .contato-info { padding: 80px; display: flex; flex-direction: column; justify-content: center; }
+    .contato-info h2 { font-size: 3rem; color: var(--bege-principal); margin-bottom: 15px; }
+    .contato-info p { font-size: 1.2rem; color: var(--preto-claro); }
+    .info-item { display: flex; align-items: flex-start; gap: 25px; margin-top: 40px; }
+    .info-item i { font-size: 2rem; color: var(--bege-principal); width: 40px; margin-top: 5px; }
+    .info-item strong { display: block; color: var(--preto-texto); font-size: 1.3rem; margin-bottom: 5px; }
+    .info-item p { font-size: 1.1rem; color: #666; }
+    .contato-mapa { height: 100%; min-height: 600px; }
+
+    /* ARQUIVO: css/style.css */
+
+    .rodape { 
+        background: #baa2a2; /* AQUI: Mudei de Preto para o seu Rosa/Bege */
+        color: #ffffff;      /* Texto branco */
+        padding: 50px 0 20px; 
+        font-size: 0.95rem;
+        margin-top: 50px;
+    }
+
+    .rodapeContainer { 
+        max-width: 1400px; 
+        margin: 0 auto; 
+        padding: 0 40px;
+        display: flex; 
+        flex-direction: column; 
+        gap: 20px;
+    }
+
+    .rodapeConteudo { 
+        display: flex; 
+        justify-content: space-between; 
+        align-items: center;
+        border-bottom: 1px solid rgba(255,255,255,0.3); 
+        padding-bottom: 20px;
+        flex-wrap: wrap; /* Garante que não quebre em telas menores */
+    }
+
+    .logo-col { 
+        display: flex; 
+        align-items: center; 
+        gap: 30px; 
+    }
+
+    .footerLogoImg { 
+        max-height: 50px; 
+        /* Se sua logo for preta e você quiser branca, mantenha o filter. 
+        Se ela já for colorida/branca, pode apagar a linha abaixo */
+        /* filter: brightness(0) invert(1); */ 
+    }
+
+    .footerSocial { 
+        display: flex; 
+        gap: 20px; 
+    }
+
+    .footerSocial a { 
+        width: 35px; 
+        height: 35px; 
+        background: rgba(255,255,255,0.2); 
+        border-radius: 50%;
+        display: flex; 
+        align-items: center; 
+        justify-content: center; 
+        transition: 0.3s; 
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .footerSocial a:hover { 
+        background: #ffffff; 
+        color: #baa2a2; /* Ícone fica rosa ao passar o mouse */
+    }
+
+    .links-col ul { 
+        display: flex; 
+        gap: 30px; 
+        list-style: none;
+    }
+
+    .links-col a { 
+        font-weight: 500; 
+        opacity: 0.9; 
+        transition: 0.2s; 
+        color: #ffffff; /* Texto branco */
+        text-decoration: none;
+    }
+
+    .links-col a:hover { 
+        opacity: 1; 
+        text-decoration: underline; 
+        color: #ffffff; 
+    }
+
+    .rodapeCopyright { 
+        text-align: center; 
+        font-size: 0.85rem; 
+        opacity: 0.9; 
+        color: #ffffff; /* Mudei para branco para ler melhor no fundo rosa */
+        margin-top: 10px;
+    }
+
+    /* Responsividade para celular (para não ficar tudo espremido) */
+    @media (max-width: 768px) {
+        .rodapeConteudo {
+            flex-direction: column;
+            gap: 20px;
+            text-align: center;
+        }
+        .logo-col {
+            flex-direction: column;
+        }
+        .links-col ul {
+            flex-direction: column;
+            gap: 10px;
+            padding: 0;
+        }
+    }
+
+    /* ================= MODAIS ================= */
+    .modal-servico-overlay {
+        position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+        background: rgba(0,0,0,0.85); z-index: 9999; /* Z-index altíssimo */
+        display: none; justify-content: center; align-items: center;
+        backdrop-filter: blur(5px); animation: fadeIn 0.3s ease;
+    }
+    .modal-servico-card {
+        background: var(--branco); width: 95%; max-width: 600px; border-radius: 15px;
+        overflow: hidden; position: relative; animation: slideUp 0.3s ease;
+        display: flex; flex-direction: column; max-height: 90vh;
+    }
+    .modal-close-btn {
+        position: absolute; top: 15px; right: 15px; background: rgba(0,0,0,0.5); color: white;
+        width: 35px; height: 35px; border-radius: 50%; font-size: 1.5rem; display: flex;
+        justify-content: center; align-items: center; z-index: 10; transition: 0.2s;
+    }
+    .modal-close-btn:hover { background: var(--bege-principal); }
+    .modal-img-top { height: 380px; overflow: hidden; flex-shrink: 0; }
+    .modal-img-top img { width: 100%; height: 100%; object-fit: cover; }
+    .modal-content-body { padding: 40px; text-align: center; overflow-y: auto; }
+    .modal-content-body h3 { font-size: 2rem; color: var(--marrom-suave); margin-bottom: 15px; }
+    .modal-desc { color: var(--preto-claro); line-height: 1.6; margin-bottom: 25px; font-size: 1.05rem; }
+    .btn-agendar-modal {
+        width: 100%; padding: 18px; background: var(--bege-principal); color: var(--branco);
+        font-weight: 600; font-size: 1.1rem; border-radius: 25px; transition: 0.3s;
+    }
+
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes slideUp { from { transform: translateY(50px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+
+    /* RESPONSIVIDADE */
+    @media (max-width: 992px) {
+    .sobreContainer { grid-template-columns: 1fr; }
+    .foto-profissional { max-width: 100%; }
+    .contato-container { grid-template-columns: 1fr; }
+    .contato-mapa { min-height: 400px; }
+    .rodapeConteudo { flex-direction: column; gap: 20px; }
+    .links-col ul { flex-wrap: wrap; justify-content: center; }
+    }
+
+    /* ================= CORREÇÃO DE Z-INDEX (Para liberar cliques) ================= */
+    .cabecalhoPainelDoMenu {
+        z-index: 5000 !important; /* Força o menu ficar acima do carrossel */
+    }
+
+    /* ================= MODAL DE LOGIN E CADASTRO ================= */
+    .modal-acesso-overlay {
+        position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+        background: rgba(0,0,0,0.9); z-index: 10000; /* Acima de TUDO */
+        display: none; justify-content: center; align-items: center;
+        backdrop-filter: blur(8px);
+        animation: fadeIn 0.3s ease;
+    }
+
+    .modal-acesso-card {
+        background: #fff; width: 95%; max-width: 450px;
+        border-radius: 20px; overflow: hidden; position: relative;
+        box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+        animation: slideUp 0.3s ease;
+    }
+
+    /* Abas de Alternância (Login / Cadastro) */
+    .abas-acesso {
+        display: flex; background: #f0f0f0;
+    }
+    .aba-btn {
+        flex: 1; padding: 15px; border: none; background: transparent;
+        font-size: 1rem; font-weight: 600; color: #888; cursor: pointer;
+        transition: 0.3s;
+    }
+    .aba-btn.ativo {
+        background: #fff; color: var(--bege-principal);
+        border-top: 3px solid var(--bege-principal);
+    }
+
+    /* Corpo do Formulário */
+    .form-container {
+        padding: 30px; display: none; /* Escondido por padrão */
+    }
+    .form-container.ativo {
+        display: block; /* Mostra o ativo */
+    }
+
+    .form-container h2 {
+        text-align: center; color: var(--preto-texto); margin-bottom: 20px;
+    }
+
+    .input-group { margin-bottom: 15px; }
+    .input-group label { display: block; font-size: 0.9rem; color: #555; margin-bottom: 5px; }
+    .input-group input {
+        width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px;
+        font-size: 1rem; outline: none; transition: 0.3s;
+    }
+    .input-group input:focus { border-color: var(--bege-principal); }
+
+    .btn-submit {
+        width: 100%; padding: 14px; background: var(--bege-principal); color: #fff;
+        border: none; border-radius: 8px; font-size: 1.1rem; font-weight: bold;
+        cursor: pointer; margin-top: 10px; transition: 0.3s;
+    }
+    .btn-submit:hover { background: var(--marrom-suave); }
+
+    /* --- CORREÇÃO DO LOGO (Um embaixo do outro) --- */
+    .textoLogo {
+        display: flex;
+        flex-direction: column; /* Coloca um embaixo do outro */
+        align-items: flex-start; /* Alinha à esquerda */
+        line-height: 1.2; /* Aproxima as linhas */
+        gap: 0; /* Remove espaço excessivo */
+    }
+
+    .textoLogo strong {
+        font-size: 1.2rem; /* Ajuste fino */
+        letter-spacing: 1px;
+    }
+
+    .textoLogo span {
+        font-size: 0.7rem; /* Menor e mais delicado */
+        letter-spacing: 3px;
+        margin-top: 2px;
+    }
+
+    /* --- MENU DO USUÁRIO (DROPDOWN) --- */
+    .user-menu-container {
+        position: relative;
+        display: inline-block;
+    }
+
+    .user-dropdown {
+        position: absolute;
+        top: 110%; /* Logo abaixo do botão */
+        right: 0;
+        background: #fff;
+        min-width: 220px;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        padding: 10px 0;
+        display: none; /* Escondido por padrão */
+        z-index: 10000;
+        border: 1px solid var(--bege-claro);
+        animation: fadeInDropdown 0.3s ease;
+    }
+
+    .user-dropdown.active {
+        display: block;
+    }
+
+    .user-dropdown a {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 12px 20px;
+        color: var(--preto-texto);
+        font-size: 0.95rem;
+        transition: 0.3s;
+        text-decoration: none;
+    }
+
+    .user-dropdown a:hover {
+        background-color: var(--cinza-neutro);
+        color: var(--bege-principal);
+    }
+
+    .user-dropdown i {
+        color: var(--bege-principal);
+        width: 20px;
+        text-align: center;
+    }
+
+    @keyframes fadeInDropdown {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+
+/* ================= CORREÇÕES DE RESPONSIVIDADE ================= */
+
+/* HERO centralizado e flexível */
+
+
+/* MENU MOBILE com transição suave */
+.painelDoMenu {
+  max-height: 0;
+  
+  transition: max-height 0.3s ease;
+}
+
+.painelDoMenu.active {
+  max-height: 500px; /* altura suficiente para caber os links */
+}
+
+/* GRID DE SERVIÇOS mais flexível */
+.servicosGrid {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+/* Ajuste de títulos em telas pequenas */
+@media (max-width: 600px) {
+  h2 { font-size: 2rem; }
+  h3 { font-size: 1.5rem; }
+  .heroConteudo h1 { font-size: 2rem; }
+}
+
+/* Breakpoint para tablets */
+@media (max-width: 992px) {
+  .sobreContainer { grid-template-columns: 1fr; }
+  .heroConteudo h1 { font-size: 2.3rem; }
+}
+
+/* Breakpoint para notebooks médios */
+@media (max-width: 1200px) {
+  .heroConteudo h1 { font-size: 2.5rem; }
+}
+
+/*Ajustes responsividade contatos*/
+
+/* ===== CORREÇÃO DE RESPONSIVIDADE PARA CONTATOS ===== */
+@media (max-width: 768px) {
+  .contato-container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 20px;
+    min-height: auto;
+  }
+
+  .contato-info {
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  .contato-info h2 {
+    font-size: 2.2rem;
+  }
+
+  .contato-info p {
+    font-size: 1.1rem;
+  }
+
+  .info-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    margin-top: 30px;
+  }
+
+  .info-item i {
+    font-size: 2rem;
+    margin-top: 0;
+  }
+
+  .info-item strong {
+    font-size: 1.2rem;
+  }
+
+  .info-item p {
+    font-size: 1rem;
+  }
+
+  iframe {
+    width: 100%;
+    height: 300px;
+    border-radius: 15px;
+    margin-top: 30px;
+  }
+}

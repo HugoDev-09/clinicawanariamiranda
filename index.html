@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dra. Wanaria Miranda | Estética Avançada</title> <!---Título responsável pelo nome do site la nas tabs do navegador.-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" type="text/css" href="style.css" media="all"> 
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+  <header class="cabecalhoPainelDoMenu">
+  <div class="containerMenuNavegacao">
+    <nav class="menu">
+
+      <a href="index.html" class="logo">
+        <img src="assets/images/logo1.png" alt="Logo Dra. Wanaria Miranda">
+        <div class="textoLogo">
+          <strong>DRA. WANÁRIA MIRANDA</strong>
+          <span>ESTÉTICA AVANÇADA</span>
+        </div>
+      </a>
+
+      <!-- BOTÃO MENU MOBILE -->
+      <button class="menu-toggle" aria-label="Abrir menu">
+        ☰
+      </button>
+
+      <ul class="painelDoMenu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#sobre">Sobre Nós</a></li>
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#avaliacoes">Avaliações</a></li>
+        <li><a href="#contatos">Contatos</a></li>
+      </ul>
+
+      
+
+    </nav>
+  </div>
+</header>
+
+<section id="home" class="heroCarrossel">
+  <div class="slideContainer">
+    <div class="slide active">
+      <img src="assets/images/FotoCarrossel01.png" alt="Foto Marketing 01">
+    </div>
+    <div class="slide">
+      <img src="assets/images/Carrossel2.png" alt="TFoto Marketin 02">
+    </div>
+    <div class="slide">
+      <img src="assets/images/carrossel3.jpg" alt="Foto Marketing 03">
+    </div>
+  </div>
+
+  <div class="heroConteudo">
+    <h2>Sua melhor versão</h2>
+    <h1>Vista-se de autoestima</h1>
+    <a class="agendarbotao" href="https://wa.me/5561996415774?text=Olá,%20gostaria%20de%20agendar%20uma%20Avaliação Gratuita,%20com%20a%20Dra%20Wanária%20Miranda.">
+      Agende Sua Avaliação Gratuita
+    </a>
+  </div>
+
+  <button class="seta seta-esq">‹</button>
+  <button class="seta seta-dir">›</button>
+</section>
+
+
+  <main>
+  
+    <section id="sobre" class="sectionSobre reveal">
+  <div class="sobreContainer">
+    <div class="sobreImagemWrapper">
+      <img src="assets/images/Dra Wanária Miranda.jpeg" alt="Dra. Wanaria Miranda" class="foto-profissional">
+    </div>
+    <div class="sobreConteudo">
+      <h2>Sobre Nós</h2>
+      <p class="crmv">CRBM/DF 27038</p> <!-- Adicione o número real do CRBM aqui -->
+      <h3>Dra. Wanária Miranda</h3>
+      
+      <p>Nossa missão é elevar a autoestima de homens e mulheres por meio de cuidados estéticos que valorizem a naturalidade. Atuamos com foco no gerenciamento do envelhecimento cutâneo, oferecendo tratamentos seguros, personalizados e embasados na ciência.</p>
+      
+      <p>A Dra Wanaria Miranda é uma Profissional capacitada, Esteticista, Biomédica Esteta, Patologista Clinica formada e habilitada pelo CRBM de Brasília, comprometida com resultados harmônicos e com um atendimento humanizado. Cada procedimento é pensado para realçar a beleza individual e promover o bem-estar.</p>
+      
+      <p>Aqui, a estética é sinônimo de cuidado, confiança e respeito à sua essência.</p>
+      <button class="saibaMaisBtn"><a href="https://wa.me/5561996415774">Agendar Consulta</a></button>
+  
+    </div>
+  </div>
+</section>
+
+    <section id="servicos" class="sectionServicos reveal">
+      <h2>Nossos Serviços</h2>
+      <p class="servicosSubtitulo">Tratamentos personalizados com tecnologia de ponta</p>
+
+      <div class="servicosGrid">
+        
+        <div class="servicoCard">
+          <div class="servicoImagem">
+            <img src="assets/images/tratamentoMelasma.jfif" alt="Tratamento de Melasma">
+            <div class="overlay-hover"></div>
+          </div>
+          <div class="servicoInfoMinimalista">
+            <h3>Tratamento de Melasma</h3>
+            <p>Pele uniforme e radiante.</p>
+            <button class="btnVerMais" onclick="abrirModalServico('modal-melasma')">Ver Mais <i class="fas fa-plus"></i></button>
+          </div>
+        </div>
+
+        <div class="servicoCard">
+          <div class="servicoImagem">
+            <img src="assets/images/FotoLimpezaDePele.jfif" alt="Limpeza de Pele">
+            <div class="overlay-hover"></div>
+          </div>
+          <div class="servicoInfoMinimalista">
+            <h3>Limpeza de Pele</h3>
+            <p>Renovação total dos poros.</p>
+            <button class="btnVerMais" onclick="abrirModalServico('modal-limpeza')">Ver Mais <i class="fas fa-plus"></i></button>
+          </div>
+        </div>
+
+        <div class="servicoCard">
+          <div class="servicoImagem">
+            <img src="assets/images/TratamentoDeAcne03.jfif" alt="Tratamento de Acne">
+            <div class="overlay-hover"></div>
+          </div>
+          <div class="servicoInfoMinimalista">
+            <h3>Tratamento de Acne</h3>
+            <p>Controle eficaz e pele lisa.</p>
+            <button class="btnVerMais" onclick="abrirModalServico('modal-acne')">Ver Mais <i class="fas fa-plus"></i></button>
+          </div>
+        </div>
+
+        <div class="servicoCard">
+          <div class="servicoImagem">
+            <img src="assets/images/botox.jfif" alt="Botox">
+            <div class="overlay-hover"></div>
+          </div>
+          <div class="servicoInfoMinimalista">
+            <h3>Botox</h3>
+            <p>Adeus às linhas de expressão.</p>
+            <button class="btnVerMais" onclick="abrirModalServico('modal-botox')">Ver Mais <i class="fas fa-plus"></i></button>
+          </div>
+        </div>
+
+        <div class="servicoCard">
+            <div class="servicoImagem">
+              <img src="assets/images/preenhimentoLabial.jfif" alt="Preenchimento">
+              <div class="overlay-hover"></div>
+            </div>
+            <div class="servicoInfoMinimalista">
+              <h3>Preenchimento Labial</h3>
+              <p>Volume e contorno perfeitos.</p>
+              <button class="btnVerMais" onclick="abrirModalServico('modal-labial')">Ver Mais <i class="fas fa-plus"></i></button>
+            </div>
+        </div>
+
+        <div class="servicoCard">
+            <div class="servicoImagem">
+              <img src="assets/images/dermaplaning.jpg" alt="Dermaplaning">
+              <div class="overlay-hover"></div>
+            </div>
+            <div class="servicoInfoMinimalista">
+              <h3>Dermaplaning</h3>
+              <p>Pele de seda instantânea.</p>
+              <button class="btnVerMais" onclick="abrirModalServico('modal-derma')">Ver Mais <i class="fas fa-plus"></i></button>
+            </div>
+        </div>
+
+        <div class="servicoCard">
+            <div class="servicoImagem">
+              <img src="assets/images/peeling.jpg" alt="Peeling">
+              <div class="overlay-hover"></div>
+            </div>
+            <div class="servicoInfoMinimalista">
+              <h3>Peeling Químico</h3>
+              <p>Renovação celular profunda.</p>
+              <button class="btnVerMais" onclick="abrirModalServico('modal-peeling')">Ver Mais <i class="fas fa-plus"></i></button>
+            </div>
+        </div>
+
+        <div class="servicoCard">
+            <div class="servicoImagem">
+              <img src="assets/images/microagulhamentoFacial.jpg" alt="Microagulhamento">
+              <div class="overlay-hover"></div>
+            </div>
+            <div class="servicoInfoMinimalista">
+              <h3>Microagulhamento</h3>
+              <p>Colágeno e rejuvenescimento.</p>
+              <button class="btnVerMais" onclick="abrirModalServico('modal-micro')">Ver Mais <i class="fas fa-plus"></i></button>
+            </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="avaliacoes" class="sectionAvaliacoes reveal">
+  <h2>O Que Dizem Nossos Clientes</h2>
+  <p class="avaliacoesSubtitulo">Avaliações reais de quem confia no nosso trabalho</p>
+
+  <div class="avaliacoesWrapper">
+      <div class="avaliacoesTrack" id="trackAvaliacoes">
+        
+        <div class="avaliacaoCard">
+          <div class="avalHeader">
+            <img src="assets/images/Lidiane Santos.png" class="avalFoto" alt="Lidiane">
+            <div class="avalInfo">
+              <h4>Lidiane Santos</h4>
+              <div class="avalEstrelas">★★★★★</div>
+                          
+            </div>
+          </div>
+          <p class="avalTexto">"Há 8 meses tive o prazer de conhecer a Wanaria e claro que virei cliente, já fiz limpeza de pele, spa dos pés, outras makes hehe! Ela é impecável no que faz, você vê amor em cada detalhe... Obrigada pela excelência no seu trabalho, por acolher minha família e fazer o dia de noiva da Mari ainda mais especial."</p>
+          <div class="avalFooter">
+            <a href="https://maps.app.goo.gl/yzovLwfA332tVqum9" target="_blank" class="avalLink">
+                Acessar pelo
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="margin-left: 8px; vertical-align: middle;">
+                    <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+                    <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+                    <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
+                    <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+                </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="avaliacaoCard">
+          <div class="avalHeader">
+             <img src="assets/images/Francy Araújo.png" class="avalFoto" alt="Foto da Cliente da Avaliação">
+            <div class="avalInfo">
+              <h4>Francy Araújo</h4>
+              <div class="avalEstrelas">★★★★★</div>
+              
+            </div>
+          </div>
+          <p class="avalTexto">"Eu super indico, Dra Wanaria é uma profissional maravilhosa, super prestativa e dedicada em cada detalhe só gratidão à Deus por sua vida."</p>
+          <div class="avalFooter">
+            <a href="https://maps.app.goo.gl/kyJDtBjGCYUM1TDj6" target="_blank" class="avalLink">
+                Acessar pelo
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="margin-left: 8px; vertical-align: middle;">
+                    <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+                    <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+                    <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
+                    <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+                </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="avaliacaoCard">
+          <div class="avalHeader">
+             <img src="assets/images/Diego Hernandes.png" class="avalFoto" alt="Diego">
+            <div class="avalInfo">
+              <h4>Diego Hernandes</h4>
+              <div class="avalEstrelas">★★★★★</div>
+              
+            </div>
+          </div>
+          <p class="avalTexto">"Amei o resultado, me sentido bem, ainda mais com uma profissional maravilhosa, super recomendo o tratamento"</p>
+          <div class="avalFooter">
+            <a href="https://maps.app.goo.gl/q2Z792SqrrvBBgWv8" target="_blank" class="avalLink">
+                Acessar pelo
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="margin-left: 8px; vertical-align: middle;">
+                    <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+                    <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+                    <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
+                    <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+                </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="avaliacaoCard">
+            <div class="avalHeader">
+               <img src="assets/images/Iara Santos.png" class="avalFoto" alt="Iara">
+              <div class="avalInfo">
+                <h4>Iara Santos</h4>
+                <div class="avalEstrelas">★★★★★</div>
+                
+              </div>
+            </div>
+            <p class="avalTexto">"A Dra. Wanaria e incrível, fiz meu tratamento de melasma em sua clínica, super recomendo... confiei acreditei e aqui estou eu com minha pele maravilhosa, nem parece a mesma rs , então muito obrigada minha querida Dra. Por realizar esse milagre em minha pele rs 🥰"</p>
+            <div class="avalFooter">
+              <a href="https://maps.app.goo.gl/TEXKCuZEzfa6aSiY9" target="_blank" class="avalLink">
+                Acessar pelo
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="margin-left: 8px; vertical-align: middle;">
+                    <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+                    <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+                    <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
+                    <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+                </svg>
+              </a>
+            </div>
+        </div>
+
+        <div class="avaliacaoCard">
+            <div class="avalHeader">
+               <img src="assets/images/Josy Silva.png" class="avalFoto" alt="Josy">
+              <div class="avalInfo">
+                <h4>Josy Silva</h4>
+                <div class="avalEstrelas">★★★★★</div>
+                
+              </div>
+            </div>
+            <p class="avalTexto">"Hoje estou com minha autoestima renovada com meu tratamento perfeito feito por ela, só tenho a agradecer muito de coração pelo milagre que ela fez no meu rosto, desejo que Deus abençoe grandemente sua vida e sua carreira. Parabéns você é uma profissional que indico sem dúvidas."</p>
+            <div class="avalFooter">
+              <a href="https://maps.app.goo.gl/ncD9hWu7jTKW74z36" target="_blank" class="avalLink">
+                Acessar pelo
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="margin-left: 8px; vertical-align: middle;">
+                    <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+                    <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+                    <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
+                    <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+                </svg>
+              </a>
+            </div>
+        </div>
+
+      </div>
+  </div>
+</section>
+
+    <section id="contatos" class="sectionContatos reveal">
+        <div class="contato-container">
+            <div class="contato-info">
+                <h2>Fale Conosco</h2>
+                <p>Estamos prontos para te atender e tirar todas as suas dúvidas sobre nossos procedimentos.</p>
+                
+                <div class="info-item">
+                    <i class="fab fa-whatsapp"></i>
+                    <div>
+                        <strong>WhatsApp</strong>
+                        <p><a href="https://wa.me/5561996415774" target="_blank" style="color:#666">(61) 99641-5774</a></p>
+                    </div>
+                </div>
+                <div class="info-item">
+    <i class="fas fa-map-marker-alt"></i>
+    <div>
+        <strong>Endereço</strong>
+        <p>QS 110 ONE Centro Clínico Lote 4/5 Sala 110<br>Samambaia, Brasília - DF, 72302-530</p>
+    </div>
+</div>
+                <div class="info-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <strong>E-mail</strong>
+                        <p>wanariamiranda@gmail.com.br</p>
+                    </div>
+                </div>
+            </div>
+            
+            <iframe 
+    src="https://maps.google.com/maps?q=ONE%20Centro%20Cl%C3%ADnico%20Samambaia&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+    width="100%" 
+    height="100%" 
+    style="border:0;" 
+    allowfullscreen="" 
+    loading="lazy">
+</iframe>
+        </div>
+    </section>
+
+  </main>
+
+ <footer class="rodape">
+    <div class="rodapeContainer">
+      <div class="rodapeConteudo">
+
+        <div class="footerCol logo-col">
+    <img src="assets/images/logo1.png" class="footerLogoImg" alt="Logo Dra. Wanaria"> 
+    <div class="footerSocial">
+        <a href="https://www.instagram.com/dra.wanaria_miranda" target="_blank" title="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+        </a>
+
+        <a href="https://wa.me/5561996415774" target="_blank" title="WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+    </div>
+</div>
+
+        <div class="footerCol links-col">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#avaliacoes">Avaliações</a></li>
+                <li><a href="meus-agendamentos.html">Área do Cliente</a></li>
+            </ul>
+        </div>
+
+      </div>
+
+      <div class="rodapeCopyright">
+        <p>© 2025 Dra. Wanaria Miranda. Todos os direitos reservados.</p>
+      </div>
+    </div>
+</footer>
+
+  <div id="modal-melasma" class="modal-servico-overlay" onclick="fecharModalServico(event)">
+      <div class="modal-servico-card">
+          <button class="modal-close-btn" onclick="fecharModalServicoBtn(this)">×</button>
+          <div class="modal-img-top"><img src="assets/images/tratamentoMelasma.jfif" alt="Foto Tratamento de Melasma"></div>
+          <div class="modal-content-body">
+              <h3>Tratamento de Melasma</h3>
+              <p class="modal-desc">Protocolo exclusivo para controle de manchas e uniformização do tom da pele, utilizando tecnologias de laser e peelings avançados.</p>
+              <button class="btn-agendar-modal"> <a href="https://wa.me/5561996415774?text=Olá,%20gostaria%20de%20agendar%20um%20Tratamento de Melasma,%20com%20a%20Dra%20Wanária%20Miranda." target="_blank"> Agendar Avaliação </a> </button>
+          </div>
+      </div>
+  </div>
+
+  <div id="modal-limpeza" class="modal-servico-overlay" onclick="fecharModalServico(event)">
+      <div class="modal-servico-card">
+          <button class="modal-close-btn" onclick="fecharModalServicoBtn(this)">×</button>
+          <div class="modal-img-top"><img src="assets/images/FotoLimpezaDePele.jfif" alt="Foto de Limpeza de pele"></div>
+          <div class="modal-content-body">
+              <h3>Limpeza de Pele</h3>
+              <p class="modal-desc">Remoção profunda de impurezas, cravos e células mortas. Ideal para manter a saúde e o viço da pele.</p>
+              <button class="btn-agendar-modal"> <a href="https://wa.me/5561996415774?text=Olá,%20gostaria%20de%20agendar%20uma%20Limpeza de Pele,%20com%20a%20Dra%20Wanária%20Miranda." target="_blank"> Agendar Avaliação </a></button>
+          </div>
+      </div>
+  </div>
+
+  <div id="modal-acne" class="modal-servico-overlay" onclick="fecharModalServico(event)">
+      <div class="modal-servico-card">
+          <button class="modal-close-btn" onclick="fecharModalServicoBtn(this)">×</button>
+          <div class="modal-img-top"><img src="assets/images/TratamentoDeAcne03.jfif" alt="Foto de Tratamento de Acne"></div>
+          <div class="modal-content-body">
+              <h3>Tratamento de Acne</h3>
+              <p class="modal-desc">Abordagem multidisciplinar para controle da oleosidade, inflamação e prevenção de cicatrizes.</p>
+              <button class="btn-agendar-modal" > <a href="https://wa.me/5561996415774?text=Olá,%20gostaria%20de%20agendar%20um%20Tratamento de Acne,%20com%20a%20Dra%20Wanária%20Miranda." target="_blank"> Agendar Avaliação </a> </button>
+          </div>
+      </div>
+  </div>
+
+  <div id="modal-botox" class="modal-servico-overlay" onclick="fecharModalServico(event)">
+      <div class="modal-servico-card">
+          <button class="modal-close-btn" onclick="fecharModalServicoBtn(this)">×</button>
+          <div class="modal-img-top"><img src="assets/images/botox.jfif" alt="Botox"></div>
+          <div class="modal-content-body">
+              <h3>Botox</h3>
+              <p class="modal-desc">Suavização de rugas dinâmicas e linhas de expressão com naturalidade, prevenindo o envelhecimento precoce.</p>
+              <button class="btn-agendar-modal" > <a href="https://wa.me/5561996415774?text=Olá,%20gostaria%20de%20agendar%20uma%20Aplicação de Botox,%20com%20a%20Dra%20Wanária%20Miranda." target="_blank"> Agendar Avaliação </a> </button>
+          </div>
+      </div>
+  </div>
+
+  <div id="modal-labial" class="modal-servico-overlay" onclick="fecharModalServico(event)">
+      <div class="modal-servico-card">
+          <button class="modal-close-btn" onclick="fecharModalServicoBtn(this)">×</button>
+          <div class="modal-img-top"><img src="assets/images/preenhimentoLabial.jfif" alt=" Foto Preenchimento Labial"></div>
+          <div class="modal-content-body">
+              <h3>Preenchimento Labial</h3>
+              <p class="modal-desc">Definição de contorno e volume na medida certa para lábios hidratados e desenhados.</p>
+              <button class="btn-agendar-modal"> <a href="https://wa.me/5561996415774?text=Olá,%20gostaria%20de%20agendar%20um%20Preenchimento Labial,%20com%20a%20Dra%20Wanária%20Miranda." target="_blank"> Agendar Avaliação </a></button>
+          </div>
+      </div>
+  </div>
+
+  <div id="modal-derma" class="modal-servico-overlay" onclick="fecharModalServico(event)">
+      <div class="modal-servico-card">
+          <button class="modal-close-btn" onclick="fecharModalServicoBtn(this)">×</button>
+          <div class="modal-img-top"><img src="assets/images/dermaplaning.jpg" alt="Foto Dermaplaning"></div>
+          <div class="modal-content-body">
+              <h3>Dermaplaning</h3>
+              <p class="modal-desc">Esfoliação física que remove células mortas e lanugem, deixando a pele com toque de seda e muito glow.</p>
+              <button class="btn-agendar-modal" >  <a href="https://wa.me/5561996415774?text=Olá,%20gostaria%20de%20agendar%20um%20Dermaplaning,%20com%20a%20Dra%20Wanária%20Miranda." target="_blank"> Agendar Avaliação </a> </button>
+          </div>
+      </div>
+  </div>
+
+  <div id="modal-peeling" class="modal-servico-overlay" onclick="fecharModalServico(event)">
+      <div class="modal-servico-card">
+          <button class="modal-close-btn" onclick="fecharModalServicoBtn(this)">×</button>
+          <div class="modal-img-top"><img src="assets/images/peeling.jpg" alt=" Foto de Peeling Químico"></div>
+          <div class="modal-content-body">
+              <h3>Peeling Químico</h3>
+              <p class="modal-desc">Renovação celular acelerada para tratar manchas, rugas finas e textura irregular da pele.</p>
+              <button class="btn-agendar-modal" > <a href="https://wa.me/5561996415774?text=Olá,%20gostaria%20de%20agendar%20um%20Peeling Químico,%20com%20a%20Dra%20Wanária%20Miranda." target="_blank"> Agendar Avaliação </a></button>
+          </div>
+      </div>
+  </div>
+
+  <div id="modal-micro" class="modal-servico-overlay" onclick="fecharModalServico(event)">
+      <div class="modal-servico-card">
+          <button class="modal-close-btn" onclick="fecharModalServicoBtn(this)">×</button>
+          <div class="modal-img-top"><img src="assets/images/microagulhamentoFacial.jpg" alt="Foto de Microagulhamento Facial"></div>
+          <div class="modal-content-body">
+              <h3>Microagulhamento</h3>
+              <p class="modal-desc">Estímulo intenso de colágeno para tratar cicatrizes de acne, poros dilatados e flacidez.</p>
+              <button class="btn-agendar-modal" ><a href="https://wa.me/5561996415774?text=Olá,%20gostaria%20de%20agendar%20um%20Microagulhamento Facial,%20com%20a%20Dra%20Wanária%20Miranda." target="_blank"> Agendar Avaliação </a></button>
+          </div>
+      </div>
+  </div>
+
+  <script src="js/config.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/script.js"></script>
+
+  <script>
+    // Lógica para verificar usuário logado (mantida do seu código)
+    document.addEventListener('DOMContentLoaded', () => {
+        if (typeof storage !== 'undefined') {
+            const usuario = storage.getUsuarioLogado();
+            if (usuario) {
+                document.getElementById('btnLoginHome').style.display = 'none';
+                document.getElementById('userAreaHome').style.display = 'flex';
+                // Pega só o primeiro nome
+                document.getElementById('userNameHome').textContent = `Olá, ${usuario.nome_completo.split(' ')[0]}`;
+            }
+        }
+    });
+  </script>
+
+  <!--Animação Menu Script-->
+
+<script>
+  const menuToggle = document.querySelector('.menu-toggle');
+  const menu = document.querySelector('.painelDoMenu');
+
+  menuToggle.addEventListener('click', () => {
+    menu.classList.toggle('active');
+  });
+
+  // Fecha o menu ao clicar em um link
+  document.querySelectorAll('.painelDoMenu a').forEach(link => {
+    link.addEventListener('click', () => {
+      menu.classList.remove('active');
+    });
+  });
+
+  // Fecha o menu ao redimensionar para desktop
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 768) {
+      menu.classList.remove('active');
+    }
+  });
+</script>
+
+
+</body>
+</html>
