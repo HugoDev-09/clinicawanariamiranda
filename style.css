@@ -428,11 +428,11 @@
     }
 
     .servicoInfoMinimalista h3 {
-        font-size: 1.6rem;
+        font-size: 1.3rem;
         font-weight: 700;
         margin-bottom: 15px;
         line-height: 1.2;
-        
+        text-align: center;
         /* MUDANÇA 2: Removi os "..." (Ellipsis) */
         /* O texto agora pode quebrar linha normalmente se for grande */
         white-space: normal; 
@@ -932,3 +932,4 @@
     margin-top: 30px;
   }
 }
+
